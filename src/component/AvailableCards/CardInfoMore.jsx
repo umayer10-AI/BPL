@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { UserRound } from 'lucide-react';
-import { Flag } from 'lucide-react';
 import { FaFlag } from "react-icons/fa";
+import { toast } from 'react-toastify';
 
-const CardInfoMore = ({p,g,k}) => {
+const CardInfoMore = ({p,g,k,coin}) => {
 
     const [isSelected, setS] = useState(false)
 
@@ -27,11 +27,17 @@ const CardInfoMore = ({p,g,k}) => {
                 </div>
                 <div className='flex justify-between items-center'>
                     <h2 className='font-semibold'>Price: <span>{p.price}</span> BDT</h2>
-                    <button onClick={() => {g(p)
+                    <button onClick={() => {
+                        if(coin < Number(p.price)){
+                            return;
+                        }
+                        g(p)
                         setS(true) 
-                        k(p.price)
-                    }} className={`text-base btn text-white ${isSelected? "btn-success" : "btn-info"}`}>{isSelected ? 'Selected': 'Choose Player'}</button>
+                        k(Number(p.price))
+                        toast(`${p.player_name} is selected`)
+                    }} className={`text-base btn text-white ${isSelected? "btn-success" : "btn-info"}`}>{isSelected && coin < Number(p.price) ? 'Selected': 'Choose Player'}</button>
                      {/* disabled={isSelected} */}
+                     
                 </div>
             </div>
         </div>

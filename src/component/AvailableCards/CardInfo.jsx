@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CardInfoMore from './CardInfoMore';
 import axios from "axios"
 
-const CardInfo = ({g,k}) => {
+const CardInfo = ({g,k,coin}) => {
 
     const [c,setC] = useState([]);
     const [loading, setL] = useState(true)
@@ -27,7 +27,7 @@ const CardInfo = ({g,k}) => {
         <div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10'>
                 {
-                    c.map((v,i) => <CardInfoMore key={i} p={v} g={g} k={k}></CardInfoMore>)
+                    c.map((v,i) => <CardInfoMore key={i} p={v} g={g} k={k} coin={coin}></CardInfoMore>)
                 }
             </div>
         </div>

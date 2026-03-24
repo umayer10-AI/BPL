@@ -3,7 +3,7 @@ import CardInfo from '../AvailableCards/CardInfo';
 import SelectCard from '../Selected/SelectCard';
 import { FaReact } from "react-icons/fa";
 
-const Card = ({k}) => {
+const Card = ({k,coin}) => {
 
     const [info, setI] = useState([])
     const [showCall, setS] = useState("available")
@@ -27,7 +27,7 @@ const Card = ({k}) => {
             </div>
 
             {
-                showCall==="available" && <CardInfo g={h} k={k}></CardInfo>
+                showCall==="available" && <CardInfo g={h} k={k} coin={coin}></CardInfo>
             }
 
             {

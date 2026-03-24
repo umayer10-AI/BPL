@@ -16,7 +16,6 @@ const Navbar = ({coin}) => {
                         <li><a>Fixture</a></li>
                         <li><a>Teams</a></li>
                         <li><a>Schedules</a></li>
-                        {/* <li className='border rounded-xl font-bold text-base'><a><span>{coin}</span> coin <CirclePoundSterling size={16} strokeWidth={1.50} /> </a></li> */}
                         <li className='border rounded-xl font-bold text-base'><a><span>{coin}</span> coin <TbCoinTakaFilled /> </a></li>
                     </ul>
                 </div>
