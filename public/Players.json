@@ -1,0 +1,122 @@
+[
+  {
+    "player_image": "https://i.ibb.co.com/FLjDv2QF/download.jpg",
+    "player_name": "Shakib Al Hasan",
+    "player_country": "Bangladesh",
+    "playing_role": "All-rounder",
+    "rating": 9.5,
+    "batting_style": "Left-hand bat",
+    "bowling_style": "Slow left-arm orthodox",
+    "price": "210,000"
+  },
+  {
+    "player_image": "https://i.ibb.co.com/39pqWdFt/download-1.jpg",
+    "player_name": "Tamim Iqbal",
+    "player_country": "Bangladesh",
+    "playing_role": "Batsman",
+    "rating": 8.8,
+    "batting_style": "Left-hand bat",
+    "bowling_style": "None",
+    "price": "150,000"
+  },
+  {
+    "player_image": "https://i.ibb.co.com/k6SrDx21/download-2.jpg",
+    "player_name": "Mushfiqur Rahim",
+    "player_country": "Bangladesh",
+    "playing_role": "Wicketkeeper Batsman",
+    "rating": 8.9,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "None",
+    "price": "140,000"
+  },
+  {
+    "player_image": "https://i.ibb.co.com/8VMxSNm/download-3.jpg",
+    "player_name": "Mahmudullah Riyad",
+    "player_country": "Bangladesh",
+    "playing_role": "All-rounder",
+    "rating": 8.7,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm off break",
+    "price": "130,000"
+  },
+  {
+    "player_image": "https://i.ibb.co.com/zYjVMj6/download-4.jpg",
+    "player_name": "Rashid Khan",
+    "player_country": "Afghanistan",
+    "playing_role": "Bowler",
+    "rating": 9.7,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm leg break",
+    "price": "200,000"
+  },
+  {
+    "player_image": "https://i.ibb.co.com/PvgdhrvC/download-5.jpg",
+    "player_name": "Andre Russell",
+    "player_country": "West Indies",
+    "playing_role": "All-rounder",
+    "rating": 9.6,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm fast",
+    "price": "220,000"
+  },
+  {
+    "player_image": "https://i.ibb.co.com/bj4VCsqy/download-6.jpg",
+    "player_name": "Faf du Plessis",
+    "player_country": "South Africa",
+    "playing_role": "Batsman",
+    "rating": 9.0,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm medium",
+    "price": "180,000"
+  },
+  {
+    "player_image": "https://i.ibb.co.com/mPswQD3/download-7.jpg",
+    "player_name": "David Warner",
+    "player_country": "Australia",
+    "playing_role": "Batsman",
+    "rating": 9.3,
+    "batting_style": "Left-hand bat",
+    "bowling_style": "Right-arm leg break",
+    "price": "200,000"
+  },
+  {
+    "player_image": "https://i.ibb.co.com/LKqc56G/download-8.jpg",
+    "player_name": "Aaron Finch",
+    "player_country": "Australia",
+    "playing_role": "Batsman",
+    "rating": 8.6,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "None",
+    "price": "160,000"
+  },
+  {
+    "player_image": "https://i.ibb.co.com/XkzG5QsL/download-9.jpg",
+    "player_name": "Lasith Malinga",
+    "player_country": "Sri Lanka",
+    "playing_role": "Bowler",
+    "rating": 9.2,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm fast",
+    "price": "170,000"
+  },
+  {
+    "player_image": "https://i.ibb.co.com/Z6L1m0jq/download-10.jpg",
+    "player_name": "Mustafizur Rahman",
+    "player_country": "Bangladesh",
+    "playing_role": "Bowler",
+    "rating": 8.9,
+    "batting_style": "Left-hand bat",
+    "bowling_style": "Left-arm fast-medium",
+    "price": "140,000"
+  },
+  {
+    "player_image": "https://i.ibb.co.com/B5ZxyXVK/download-11.jpg",
+    "player_name": "Liam Livingstone",
+    "player_country": "England",
+    "playing_role": "All-rounder",
+    "rating": 9.1,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm off break",
+    "price": "190,000"
+  }
+]

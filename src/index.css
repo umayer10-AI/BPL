@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.img{
+    background-image: url('./assets/bg-shadow.png');
+}
