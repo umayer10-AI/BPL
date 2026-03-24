@@ -34,8 +34,13 @@ const CardInfoMore = ({p,g,k,coin}) => {
                         g(p)
                         setS(true) 
                         k(Number(p.price))
-                        toast(`${p.player_name} is selected`)
-                    }} className={`text-base btn text-white ${isSelected? "btn-success" : "btn-info"}`}>{isSelected && coin < Number(p.price) ? 'Selected': 'Choose Player'}</button>
+                        toast(`${p.player_name} is selected`,{
+                            style: {
+                                background: "#1f2937",
+                                color: "#fff"
+                            }
+                        })
+                    }} className={`text-base btn text-white ${isSelected? "btn-success" : "btn-info"}`}>{isSelected ? 'Selected': 'Choose Player'}</button>
                      {/* disabled={isSelected} */}
                      
                 </div>
