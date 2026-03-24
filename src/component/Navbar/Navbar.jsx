@@ -1,21 +1,23 @@
 import React from 'react';
 import img from "../../assets/logo.png"
 import { CirclePoundSterling } from 'lucide-react';
+import { TbCoinTakaFilled } from "react-icons/tb";
 
-const Navbar = () => {
+const Navbar = ({coin}) => {
     return (
         <div className=''>
-            <div className="bg-base-100 shadow-sm px-14 flex flex-col lg:flex-row items-center justify-between">
+            <div className="bg-base-100 shadow-sm px-14 py-2 flex flex-col lg:flex-row items-center justify-between mb-3">
                 <div className="">
-                    <img src={img} alt="" />
+                    <img className='w-[80%]' src={img} alt="" />
                 </div>
                 <div className="">
-                    <ul className="menu flex-row flex-wrap gap-3 justify-center">
+                    <ul className="menu flex-row flex-wrap gap-3 justify-center font-semibold">
                         <li><a>Home</a></li>
                         <li><a>Fixture</a></li>
                         <li><a>Teams</a></li>
                         <li><a>Schedules</a></li>
-                        <li className='border rounded-xl'><a><span>0</span> coin <CirclePoundSterling size={16} strokeWidth={1.50} /> </a></li>
+                        {/* <li className='border rounded-xl font-bold text-base'><a><span>{coin}</span> coin <CirclePoundSterling size={16} strokeWidth={1.50} /> </a></li> */}
+                        <li className='border rounded-xl font-bold text-base'><a><span>{coin}</span> coin <TbCoinTakaFilled /> </a></li>
                     </ul>
                 </div>
             </div>

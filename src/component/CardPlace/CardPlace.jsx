@@ -1,42 +1,51 @@
 import React, { useState } from 'react';
 import CardInfo from '../AvailableCards/CardInfo';
 import SelectCard from '../Selected/SelectCard';
+import { FaReact } from "react-icons/fa";
 
-const Card = () => {
+const Card = ({k}) => {
 
-    const [f, setF] = useState("available")
-    const [n, setN] = useState("Available Players")
     const [info, setI] = useState([])
-
-    const a = () => {
-        setF("available")
-        setN("Available Players")
-    }
-    const b = () => {
-        setF("selected")
-        setN(`Selected Player (${info.length}/6)`)
-    }
+    const [showCall, setS] = useState("available")
 
     const h = (g) => {
-        console.log(g)
-        setI(c => info.includes(g) ? c : [...c,g])
+        setI(c => c.includes(g) ? c : [...c,g])
+    }
+
+    const m = (e) => {
+        setI(c => c.filter(v => v.player_name !== e))
     }
 
     return (
         <div className='max-w-[90%] mx-auto'>
-            <div className='flex justify-between py-10'>
-                <h2 className='font-semibold text-2xl'>{n}</h2>
+            <div className='flex flex-col items-center gap-4 lg:flex-row lg:justify-between pt-10 lg:py-10'>
+                <h2 className='font-semibold text-2xl'>{showCall==="available"? `Available players` : `selected player (${info.length}/6)`}</h2>
                 <div className='flex gap-3'>
-                    <h3 onClick={a} className={`${f==="available" ? 'btn btn-warning' : 'btn'} font-bold`}>Available</h3>
-                    <h3 onClick={b} className={`${f==="selected" ? 'btn btn-warning' : 'btn'} font-bold`}>Selected (<span>{info.length}</span>)</h3>
+                    <h3 onClick={() => setS("available")} className={`${showCall==="available" ? 'btn btn-warning' : 'btn'} font-bold`}>Available</h3>
+                    <h3 onClick={() => setS("selected")} className={`${showCall==="selected" ? 'btn btn-warning' : 'btn'} font-bold`}>Selected (<span>{info.length}</span>)</h3>
                 </div>
             </div>
 
-            <CardInfo g={h}></CardInfo>
+            {
+                showCall==="available" && <CardInfo g={h} k={k}></CardInfo>
+            }
 
             {
-                info.map((v,i) => <SelectCard key={i} {...v}></SelectCard>)
+                showCall=== "selected" && (
+                    info.length===0 ? 
+                    <div className='flex justify-center my-10'>
+                        <div className='space-y-4'>
+                            <h2 className='text-4xl flex justify-center'><FaReact /></h2>
+                            <h1 className='text-4xl font-semibold text-neutral/50'>No players select</h1>
+                        </div>
+                    </div>
+                : <div className='flex flex-col gap-3'>
+                    {
+                        info.map((v,i) => <SelectCard key={i} {...v} m={m}></SelectCard>)
+                    }
+                </div>)
             }
+                        
         </div>
     );
 };

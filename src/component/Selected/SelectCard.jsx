@@ -1,8 +1,8 @@
 import React from 'react';
 import { MdDelete } from "react-icons/md";
 
-const SelectCard = ({player_image,player_name,batting_style}) => {
-    console.log(player_image)
+const SelectCard = ({player_image,player_name,batting_style,m}) => {
+    // console.log(player_image)
     return (
         <div className='flex justify-between items-center border border-gray-300 rounded-xl p-4'>
             <div className='flex justify-center items-center gap-4'>
@@ -15,7 +15,7 @@ const SelectCard = ({player_image,player_name,batting_style}) => {
                 </div>
             </div>
             <div>
-                <h2 className='text-2xl text-red-500 mr-4'><MdDelete /></h2>
+                <h2 onClick={() => m(player_name)} className='text-2xl text-red-500 mr-4'><MdDelete /></h2>
             </div>
         </div>
     );

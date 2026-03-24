@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { UserRound } from 'lucide-react';
 import { Flag } from 'lucide-react';
 import { FaFlag } from "react-icons/fa";
 
-const CardInfoMore = ({p,g}) => {
+const CardInfoMore = ({p,g,k}) => {
+
+    const [isSelected, setS] = useState(false)
 
     return (
         <div>
@@ -25,7 +27,11 @@ const CardInfoMore = ({p,g}) => {
                 </div>
                 <div className='flex justify-between items-center'>
                     <h2 className='font-semibold'>Price: <span>{p.price}</span> BDT</h2>
-                    <button onClick={() => g(p)} className='text-base btn'>Choose Player</button>
+                    <button onClick={() => {g(p)
+                        setS(true) 
+                        k(p.price)
+                    }} className={`text-base btn text-white ${isSelected? "btn-success" : "btn-info"}`}>{isSelected ? 'Selected': 'Choose Player'}</button>
+                     {/* disabled={isSelected} */}
                 </div>
             </div>
         </div>

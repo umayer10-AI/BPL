@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './component/Navbar/Navbar';
 import Hero from './component/Hero/Hero';
 import Card from './component/CardPlace/CardPlace';
-import CardInfo from './component/AvailableCards/CardInfo';
 
 const AppTotal = () => {
+
+    const [coin,setCoin] = useState(1000000)
+
+    const k = (e) => {
+        setCoin(c => c-e)
+    }
+
     return (
         <div>
-            <Navbar></Navbar>
+            <Navbar coin={coin}></Navbar>
             <Hero></Hero>
-            <Card></Card>
-            
+            <Card k={k}></Card>
         </div>
     );
 };
