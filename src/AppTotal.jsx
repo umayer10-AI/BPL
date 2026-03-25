@@ -19,7 +19,7 @@ const AppTotal = () => {
         <div>
             <Navbar coin={coin}></Navbar>
             <Hero></Hero>
-            <CardPlace k={k} coin={coin}></CardPlace>
+            <CardPlace k={k} coin={coin} setCoin={setCoin}></CardPlace>
             <ToastContainer />
         </div>
     );

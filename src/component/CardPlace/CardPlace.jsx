@@ -3,7 +3,7 @@ import CardInfo from '../AvailableCards/CardInfo';
 import SelectCard from '../Selected/SelectCard';
 import { FaReact } from "react-icons/fa";
 
-const Card = ({k,coin}) => {
+const Card = ({k,coin,setCoin}) => {
 
     const [info, setI] = useState([])
     const [showCall, setS] = useState("available")
@@ -12,8 +12,15 @@ const Card = ({k,coin}) => {
         setI(c => c.includes(g) ? c : [...c,g])
     }
 
-    const m = (e) => {
+    const m = (e,price) => {
         setI(c => c.filter(v => v.player_name !== e))
+        setCoin(c => c + Number(price))
+    }
+
+    const a = () => {
+        let sum = info.reduce((x,y) => x+y.price,0)
+        setCoin(c => c + sum)
+        setI([]);
     }
 
     return (
@@ -39,10 +46,15 @@ const Card = ({k,coin}) => {
                             <h1 className='text-4xl font-semibold text-neutral/50'>No players select</h1>
                         </div>
                     </div>
-                : <div className='flex flex-col gap-3'>
-                    {
-                        info.map((v,i) => <SelectCard key={i} {...v} m={m}></SelectCard>)
-                    }
+                : <div>
+                    <div className='flex justify-end mb-3'>
+                        <button onClick={a} className='btn btn-info text-white'>Clear All</button>
+                    </div>
+                    <div className='flex flex-col gap-3'>
+                        {
+                            info.map((v,i) => <SelectCard key={i} {...v} m={m}></SelectCard>)
+                        }
+                    </div>
                 </div>)
             }
                         
